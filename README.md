@@ -72,3 +72,8 @@ This log will show the author of each commit, the date, and commit message, plus
 
 ## Getting started with Github desktop interface
 1. Download Github for Windows: https://desktop.github.com/
+2. Login with your github info
+3. Clone exisiting repositories from github.com, or add previously downloaded repos into the client.
+4. View changes in files, choose which files to commit, and commit.
+5. Sync with the remote db, which pulls and pushes in one step.
+
