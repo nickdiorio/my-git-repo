@@ -25,6 +25,13 @@ On GitHub, navigate to the main page of the repository, and under the repository
 git clone https://github.com/nickdiorio/my-git-repo.git
 ```
 
+### Pulling in remote changes
+Before you start working on your files for the day, you will want to pull down changes that other people have committed.  You don't have to, but you will be required to before being allowed to push your changes to the remote repo:
+
+``` 
+git pull
+```
+
 ### Making modifications
 As you add and modify files within your project, you can see the status of your repo at any time:
 
@@ -54,6 +61,14 @@ So, you've staged files, and committed them.  But now, you've finally got to pus
 ``` 
 git push
 ```
+
+### Viewing commit history
+To view a history of the repository, you can type:
+
+``` 
+git log
+```
+This log will show the author of each commit, the date, and commit message, plus a unique hashid that identifies the commit.
 
 ## Getting started with Github desktop interface
 1. Download Github for Windows: https://desktop.github.com/
