@@ -3,6 +3,7 @@
 ## Basic Git via the command line:
 1. Download git: https://git-scm.com/ and run the installer with the default components selected and just step through the installation.  This means you don't need to change any of the options or selections.
 2. Full reference available: https://git-scm.com/book/en/v2
+3. This mini tutorial is developed from http://rypress.com/tutorials/git/
 
 ### Configuring your environment
 Open the git bash and type:
@@ -55,7 +56,7 @@ After you've added all the files you want to add to a particular commit, you com
 git commit -m "Adding a webpage about the color orange"
 ```
 
-### Pushing the commit to the remo repo
+### Pushing the commit to the remote repo
 So, you've staged files, and committed them.  But now, you've finally got to push them out to remote repo so that everyone else working on the repo knows about your work and can ingest it into their own working copy.  To do this requires write access on the repo you are trying to push to, and you may be prompted for your username and password for github.
 
 ``` 
@@ -63,12 +64,37 @@ git push
 ```
 
 ### Viewing commit history
-To view a history of the repository, you can type:
+To view a history of the repository, you can type any of the following.  The second command condenses the log messages to one line, which is helpful for viewing a quick summary.  You can also do it for a specific file, as the third line demonstrates.
 
 ``` 
 git log
+git log --oneline
+git log --oneline orange.html
 ```
 This log will show the author of each commit, the date, and commit message, plus a unique hashid that identifies the commit.
+
+### Reverting a commit
+Git is designed to never loses version history, so to revert a change, git will modify the files in question back to their previous state, and then recommits them as a new commit.  The process to do so is fairly simple.  Use git log to obtain the id of the commit you want to undo, and then revert it:
+
+```
+git log --oneline
+git revert 3e14adc
+git push
+```
+
+### Undo uncommitted changes
+If you've been developing, but haven't committed and want to undo your changes, the process is a little different since there is no commit id to use.  Note, you should be careful using these commands as they operate on the working directory, not on committed snapshots.  They permanently undo changes, so make sure that's what you want.  Otherwise, you could simply commit what you have and then do a git revert to preserve the history.
+
+```
+git reset --hard
+```
+This changes all *tracked* changes to match the most recent commit. 
+
+```
+git clean -f
+```
+This removes all *untracked* files.  
+
 
 ## Getting started with Github desktop interface
 1. Download Github for Windows: https://desktop.github.com/
