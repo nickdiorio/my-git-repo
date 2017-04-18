@@ -1,4 +1,11 @@
 # Git and Github:
+Git is a distributed version control system (DVCS), where each developer has their own copy of the project and periodically pulls in other users changes and pushes their own.  Github is a website that hosts git repositories and offers ways to interact with the repo.
+
+There are four core elements of Git version control to understand
+- The Working Directory
+- The Staged Snapshot
+- Committed Snapshots
+- Development branches
 
 ## Basic Git via the command line:
 1. Download git: https://git-scm.com/ and run the installer with the default components selected and just step through the installation.  This means you don't need to change any of the options or selections.
@@ -40,7 +47,11 @@ As you add and modify files within your project, you can see the status of your 
 git status
 ```
 
-This will tell you which files have been modified, and which files are new and not being tracked.
+This will tell you which files have been modified, and which files are new and not being tracked.  If you want to remove a file from version control, you type:
+
+```
+git rm file_name
+```
 
 ### Adding files to the staging area
 For new files you create, you need to tell Git that you want to explicitly add them to version control.  The staging area is basically a place where you stage files before committing them.  It guarantees that you commit only exactly the files that you want in a particular commit.
@@ -95,6 +106,41 @@ git clean -f
 ```
 This removes all *untracked* files.  
 
+## Branching workflow with Git via the command line
+A branch is an independent line of development.  Branches lend themselves to several standardized workflows for collaborative development, which will be emphasized for SAM.  To list existing branches for your project:
+
+```
+git branch
+```
+
+This will display branches for the project.  If there is only one branch, it will be called `master`.  This is Git's default branch.  The branch with an asterik next to it is the one currently checked out (only one can be checked out at a time).  
+
+## Create a new branch
+To create a new branch to work from, and then switch to work from it, simply type:
+
+```
+git branch new_branch_name
+git checkout new_branch_name
+``` 
+
+Now, any changes you make and commit will be isolated from those in the `master` branch.
+
+## Merging changes
+Once you've made isolated changes in a branch and tested, and are confident the changes belong in the master branch, you can merge. The merge command always merges into the currently checked out branch.
+
+```
+git checkout master
+git merge new_branch_name
+```
+
+Which merges `new_branch_name` into `master`
+
+## Deleting a branch
+To delete a branch that is no longer needed is straightforward.  Git will warn you if you are deleting an unmerged branch.
+
+``` 
+git branch -d new_branch_name
+```
 
 ## Getting started with Github desktop interface
 1. Download Github for Windows: https://desktop.github.com/
