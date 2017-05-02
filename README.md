@@ -7,6 +7,13 @@ There are four core elements of Git version control to understand
 - Committed Snapshots
 - Development branches
 
+## Getting started with Github desktop interface
+1. Download Github for Windows: https://desktop.github.com/
+2. Login with your github info
+3. Clone exisiting repositories from github.com, or add previously downloaded repos into the client.
+4. View changes in files, choose which files to commit, and commit.
+5. Sync with the remote db, which pulls and pushes in one step.
+
 ## Basic Git via the command line:
 1. Download git: https://git-scm.com/ and run the installer with the default components selected and just step through the installation.  This means you don't need to change any of the options or selections.
 2. Full reference available: https://git-scm.com/book/en/v2
@@ -142,10 +149,5 @@ To delete a branch that is no longer needed is straightforward.  Git will warn y
 git branch -d new_branch_name
 ```
 
-## Getting started with Github desktop interface
-1. Download Github for Windows: https://desktop.github.com/
-2. Login with your github info
-3. Clone exisiting repositories from github.com, or add previously downloaded repos into the client.
-4. View changes in files, choose which files to commit, and commit.
-5. Sync with the remote db, which pulls and pushes in one step.
+
 
