@@ -6,9 +6,9 @@
   <meta charset="utf-8" />
 </head>
 <body>
-  <h1 style="color: #07F">A Colorful Website</h1>
-  <p>This is a website about color!</p>    
-  
+  <h1 style="color: #07F">A Website Formerly Known as "A Colorful Website"</h1>
+  <p>This was a website about color! Now it is a website about color and documentation content in the SAM SVN repository.</p>    
+
   <h2 style="color: #C00">News</h2>
   <ul>
     <li>Nothing going on (yet)</li>
@@ -22,6 +22,179 @@
   <li style="color: #00F">
     <a href="blue.html">The Blue Page</a>
   </li>
+</ul>
+
+<h1 style="color: #07f">Documentation Folders in SVN</h1>
+
+<h2>SSC</h2>
+
+<p>Windows batch files (.bat) and Bourne shell scripts (.sh) for building SDK</p>
+
+<p>Old version of releasenotes.html -- OK to delete?</p>
+
+<p>TCS example CSV files
+
+<h3>SSC/doc</h3>
+
+<p><strong>Note:</strong> The batch file for building the SDK package copies the SSC Guide PDF from this folder. The folder should contain only SSC Guide files, and other stuff should be moved to a different folder.</p>
+
+<p>Instructions for building SDK</p>
+
+<p>Old SDK release notes -- Update and add to SDK package</p>
+
+<p>Documents for SSC Guide, including LaTex and Doxygen (for generating function documentation of sscapi.h) -- Need to update SSC documentation section</p>
+
+<h3>SSC/doc/CSP Solver</h3>
+
+<p>PDFs of flow charts for CSP controller algorithms</p>
+
+<h3>SSC/doc/LandBOS-master</h3>
+
+<p>Copy of GIT repository for Wind Land-based BOS cost model. Includes source code for C implementation and original Excel spreadsheet version.</p>
+
+<h3>SSC/examples</h3>
+
+<p><strong>Note:</strong> The SDK batch files read the .c examples to include in the SDK, but not the other lk files.</p>
+
+<p>C example files for SDK package</p>
+
+<p>LK scripts that need to be tested and updated to include in SDK package. Need to check with Ty on CSP scripts to see if they are appropriate for including in SDK package.</p>
+
+<h3>SSC/tcsdata</h3>
+
+<p>This folder only contains the /docs folder. I'm not sure we need to keep the tcsdata folder -- can move docs to top level.</p>
+
+<h3>SSC/tcsdata/docs</h3>
+
+<p>2012 instructions from Aron for compiling SSC/WEC/TCS for wxWidgets 2.9 with VC++ 2012</p>
+
+<p>2013 documentation for running TCS From SAM by Tom Ferguson</p>
+
+<p>TCS documentation by Aron.</p>
+
+<p>TCS paper for SolarPACES 2013 -- move to new publications folder?</p>
+
+<h2>SAMnt</h2>
+
+<p>SAM To Do spreadsheet</p>
+
+<p>Registration keys</p>
+
+<p>User tracking scripts</p>
+
+<p>High level test scripts</p>
+
+<p>CEC module and inverter database update scripts</p>
+
+<h3>SAMnt/ Build Folders</h3>
+
+<p>build_linux, build_osx, build_vc2013 all have documents with steps and hints for building SAM versions</p>
+
+<h3>SAMnt/deploy</h3>
+
+<p>Inno Setup scripts for Windows installation wizard, with .rtf file for NREL legal disclaimer</p>
+
+<h3>SAMnt/doc</h3>
+
+<p>Aron's internationalization document</p>
+
+<p>Patch instructions</p>
+
+<p>Nick notes on Sunverge storage conversations</p>
+
+<p>Spreasheet of 2014 beta feedback</p>
+
+<p>Nick notes on Trac</p>
+
+<p>Feedback folder collection of positive feedback emails</p>
+
+<p>pvsamv1 reference manual</p>
+
+<p>Nick tabular browser documentation</p>
+
+<h3>SAMnt/LK Cookbook</h3>
+
+<p>Copies of LK samples posted on website</p>
+
+<p>LK for DView example folder</p>
+
+<h3>SAMnt/PVRPM_janine_draft</h3>
+
+<p>LK scripts for PV reliability model</p>
+
+<h3>SAMnt/References</h3>
+
+<p>Annual Technology Baseline (ATB) workbook based on 2015 scenarios</p>
+
+<p>Combine cases PPT flowchart used in macro documentation</p>
+
+<p>Wind cost and scaling workbook v2.01.04 matched to SAM defaults
+Wind cost and scaling workbook v2.01.12 matched to SAM defaults with SAM file</p>
+
+<p>PV default costs workbook current as of 2017.1.17</p>
+
+<p>PV default system workbook current as of 2016.3.14</p>
+
+<p>Wind default costs workbook current as of 2017.1.17</p>
+
+<p>LK script to set wind OBOS defaults</p>
+
+<p>Sandia inverter coefficient workbook</p>
+
+<h3>SAMnt/tests</h3>
+
+<p>Folders of various test files</p>
+
+<h3>SAMnt/videos</h3>
+
+<p>Steve's videos demonstrating various issues</p>
+
+<h2>Proposed New Folder Structure for Documentation</h2>
+
+<h3>Notes</h3>
+
+<p>Keep all scripts for builds with their associated files, etc., SDK .bat files stay in root SSC folder</p>
+<p>Keep release notes HTML file in GIT repository instead of copy on SAM website?</p>
+<p>Ditto for help files?</p>
+
+<h3>Folders</h3>
+
+<ul>
+<li>CSP Solver Flowcharts
+<li>Defaults Documentation
+<li>LK Cookbook
+<li>Process Instructions
+<li>Project Management
+	<ul>
+	<li>Proposed Activities
+	<li>Task Lists
+	<li>Usage Tracking
+	<li>User Feedback
+	</ul>
+<li>Publications
+	<ul>
+	<li>PV Reference Manual
+	<li>TCS SolarPaces 2013
+	</ul>
+<li>Projects (NEW IDEA)
+	<ul>
+	<li>Validation
+	<li>Snow Model
+	<li>...
+	</ul>
+<li>PVRPM Scripts
+<li>Registration Keys
+<li>Steve's Excellent Videos
+<li>TCS Documentation
+<li>Test Files
+	<ul>
+	<li>PV 3D Shading
+	<li>Weather 
+	<li>...
+	</ul>
+<li>Test Scripts</li>	
+<li>Wind BOS cost model (land)
+<li>Windows Installation Script (Inno Setup)
 </ul>
   
 </body>
